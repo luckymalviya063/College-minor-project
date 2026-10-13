@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Lost Item | Lost & Found Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="report-lost">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <span class="eyebrow">REPORT LOST ITEM</span>
+        <h1>Tell the campus what you lost.</h1>
+        <p>Provide clear details so someone who found it can identify and contact you.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container form-layout">
+        <form id="lost-form" class="form-card" novalidate>
+          <div class="form-header"><div><span class="eyebrow">LOST REPORT</span><h2>Item information</h2></div><span class="badge badge-lost">Lost</span></div>
+          <div class="form-grid">
+            <div class="form-group"><label for="itemName">Item name *</label><input id="itemName" name="itemName" required maxlength="80" placeholder="e.g. Samsung Galaxy phone"><small class="field-error"></small></div>
+            <div class="form-group"><label for="category">Category *</label><select id="category" name="category" required></select><small class="field-error"></small></div>
+            <div class="form-group full"><label for="description">Description *</label><textarea id="description" name="description" required maxlength="500" rows="4" placeholder="Colour, model, condition, visible marks..."></textarea><small class="field-error"></small></div>
+            <div class="form-group"><label for="location">Location where lost *</label><input id="location" name="location" required maxlength="120" placeholder="e.g. Central Library"><small class="field-error"></small></div>
+            <div class="form-group"><label for="date">Date lost *</label><input id="date" name="date" type="date" required><small class="field-error"></small></div>
+            <div class="form-group"><label for="time">Approx. time</label><input id="time" name="time" type="time"><small class="field-error"></small></div>
+            <div class="form-group full"><label for="identification">Item identification / unique details</label><textarea id="identification" name="identification" maxlength="300" rows="3" placeholder="IMEI, initials, sticker, cover, serial number, etc."></textarea><small class="field-error"></small></div>
+          </div>
+          <div class="form-divider"></div>
+          <div class="form-header"><div><span class="eyebrow">CONTACT</span><h2>Your information</h2></div></div>
+          <div class="form-grid">
+            <div class="form-group"><label for="reporterName">Your name *</label><input id="reporterName" name="reporterName" required maxlength="80" placeholder="Full name"><small class="field-error"></small></div>
+            <div class="form-group"><label for="contact">Contact number / email *</label><input id="contact" name="contact" required maxlength="120" placeholder="Phone number or email"><small class="field-error"></small></div>
+            <div class="form-group full"><label for="image">Optional image</label><input id="image" name="image" type="file" accept="image/*"><small>Images are resized in the browser before being stored in LocalStorage.</small><small class="field-error"></small></div>
+          </div>
+          <div class="form-actions"><a class="btn btn-outline" href="index.html">Cancel</a><button class="btn btn-primary" type="submit">Submit Lost Report</button></div>
+        </form>
+        <aside class="info-card">
+          <div class="info-icon">!</div><h3>Tips for a useful report</h3>
+          <ul class="check-list"><li>Use the exact campus location if possible.</li><li>Add identifying marks that are not obvious from the photo.</li><li>Use a contact method you check regularly.</li><li>Never publish passwords, OTPs or other sensitive information.</li></ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div><div id="toast-container" class="toast-container"></div>
+  <script src="js/data.js"></script><script src="js/main.js"></script><script src="js/reports.js"></script>
+</body>
+</html>

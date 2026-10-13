@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Lost & Found Portal</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-banner compact"><div class="container"><span class="eyebrow">MY REPORTS</span><h1>Personal Dashboard</h1><p>Manage reports using the contact information you used while submitting them.</p></div></section>
+    <section class="section">
+      <div class="container">
+        <div class="dashboard-login">
+          <div><span class="eyebrow">IDENTIFY YOUR REPORTS</span><h2>Enter your contact</h2><p>Use the same email address or phone number entered in your report.</p></div>
+          <form id="dashboard-form" class="inline-form"><input id="dashboard-contact" required placeholder="Email or phone number"><button class="btn btn-primary">Load My Reports</button></form>
+        </div>
+        <div id="dashboard-content" class="hidden">
+          <div class="stats-grid dashboard-stats">
+            <article class="stat-card"><span class="stat-icon">◈</span><div><strong id="dash-total">0</strong><span>My Reports</span></div></article>
+            <article class="stat-card"><span class="stat-icon">⌖</span><div><strong id="dash-lost">0</strong><span>Lost</span></div></article>
+            <article class="stat-card"><span class="stat-icon">✓</span><div><strong id="dash-found">0</strong><span>Found</span></div></article>
+            <article class="stat-card"><span class="stat-icon">★</span><div><strong id="dash-resolved">0</strong><span>Resolved</span></div></article>
+          </div>
+          <div class="section-heading dashboard-heading"><div><span class="eyebrow">SUBMITTED REPORTS</span><h2>Your reports</h2></div><button id="forget-contact" class="btn btn-outline">Forget contact</button></div>
+          <div id="dashboard-reports" class="dashboard-list"></div>
+          <div id="dashboard-empty" class="empty-state hidden"><div class="empty-icon">◎</div><h3>No reports found</h3><p>No report matches this contact information.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div><div id="toast-container" class="toast-container"></div>
+  <div id="edit-modal" class="modal hidden" aria-hidden="true"><div class="modal-backdrop" data-close-edit></div><div class="modal-dialog modal-large"><button class="modal-close" data-close-edit aria-label="Close">×</button><div id="edit-content"></div></div></div>
+  <script src="js/data.js"></script><script src="js/main.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>

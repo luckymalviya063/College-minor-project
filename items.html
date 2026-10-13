@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lost & Found Items | Vaishnavi Group of Institutes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="items">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-banner compact"><div class="container"><span class="eyebrow">BROWSE REPORTS</span><h1>Lost & Found Items</h1><p>Search and filter campus reports to find a possible match.</p></div></section>
+    <section class="section">
+      <div class="container">
+        <div class="filters-card">
+          <div class="filter-row">
+            <div class="search-field wide"><span>⌕</span><input id="item-search" type="search" placeholder="Search by item, description, location or name..."></div>
+            <select id="item-category"><option value="">All categories</option></select>
+            <select id="item-status"><option value="">All statuses</option><option value="Lost">Lost</option><option value="Found">Found</option><option value="Resolved">Resolved</option></select>
+            <select id="item-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="name">Name A–Z</option><option value="category">Category A–Z</option></select>
+          </div>
+          <div class="filter-summary"><span id="result-count">0 reports</span><button id="clear-filters" class="text-button" type="button">Clear filters</button></div>
+        </div>
+        <div id="items-grid" class="card-grid"></div>
+        <div id="items-empty" class="empty-state hidden"><div class="empty-icon">⌕</div><h3>No matching reports</h3><p>Try changing your search terms or filters.</p><a class="btn btn-primary" href="report-lost.html">Create a report</a></div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div><div id="toast-container" class="toast-container"></div>
+  <div id="item-modal" class="modal hidden" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" data-close-modal aria-label="Close">×</button><div id="modal-content"></div></div></div>
+  <script src="js/data.js"></script><script src="js/main.js"></script><script src="js/reports.js"></script>
+</body>
+</html>

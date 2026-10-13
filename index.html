@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="College Lost & Found Portal for Vaishnavi Group of Institutes">
+  <title>Lost & Found Portal | Vaishnavi Group of Institutes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">VAISHNAVI GROUP OF INSTITUTES</span>
+          <h1>Find what you lost.<br><span>Return what you found.</span></h1>
+          <p>A simple college-wide platform to report, discover, and resolve lost & found items safely and efficiently.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="report-lost.html">Report Lost Item</a>
+            <a class="btn btn-secondary" href="report-found.html">Report Found Item</a>
+          </div>
+          <div class="hero-note"><span class="status-dot"></span> Built for students and staff • Works offline with browser LocalStorage</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div class="mini-logo"><img src="images/college-logo.png" alt="Vaishnavi Group of Institutes logo"></div>
+            <span class="badge badge-info">Campus Portal</span>
+          </div>
+          <h3>One place for every missing item.</h3>
+          <p>Search recent reports, compare locations and descriptions, and contact the reporter using the information they provided.</p>
+          <div class="quick-stats">
+            <div><strong id="hero-total">0</strong><span>Total reports</span></div>
+            <div><strong id="hero-found">0</strong><span>Found</span></div>
+            <div><strong id="hero-resolved">0</strong><span>Resolved</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="search">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">QUICK SEARCH</span>
+            <h2>Looking for something?</h2>
+          </div>
+          <a class="text-link" href="items.html">View all reports →</a>
+        </div>
+        <form class="search-panel" id="home-search-form">
+          <div class="search-field">
+            <span>⌕</span>
+            <input id="home-search" type="search" placeholder="Search mobile, ID card, library, black bag..." aria-label="Search reports">
+          </div>
+          <select id="home-category" aria-label="Filter by category">
+            <option value="">All categories</option>
+          </select>
+          <button class="btn btn-primary" type="submit">Search Reports</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon">◈</span><div><strong id="stat-total">0</strong><span>Total Reports</span></div></article>
+          <article class="stat-card"><span class="stat-icon">⌖</span><div><strong id="stat-lost">0</strong><span>Lost Items</span></div></article>
+          <article class="stat-card"><span class="stat-icon">✓</span><div><strong id="stat-found">0</strong><span>Found Items</span></div></article>
+          <article class="stat-card"><span class="stat-icon">★</span><div><strong id="stat-resolved">0</strong><span>Resolved</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">RECENT REPORTS</span>
+            <h2>Latest activity</h2>
+          </div>
+          <a class="btn btn-outline" href="items.html">Browse all</a>
+        </div>
+        <div id="recent-reports" class="card-grid"></div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-card">
+        <div>
+          <span class="eyebrow">MAKE A DIFFERENCE</span>
+          <h2>Found an item? Help it reach its owner.</h2>
+          <p>Reporting a found item takes less than a minute and can save another student a lot of time.</p>
+        </div>
+        <a class="btn btn-light" href="report-found.html">Report Found Item →</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="toast-container" class="toast-container"></div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
